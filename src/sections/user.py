@@ -73,13 +73,16 @@ class UserSection(Section):
     def send_start_menu(self, user: User):
         ejf = self.data.get_btw()
 
-        btn_vacancy = KeyboardButton(text=self.TEXT_BUTTONS[0])
-        # btn_who = KeyboardButton(text=self.TEXT_BUTTONS[1])
-        btn_profile = KeyboardButton(text=self.TEXT_BUTTONS[2])
+        btn_schedule = KeyboardButton(text="Розклад")
+        btn_info = KeyboardButton(text="Інформація про спікерів")
+        btn_chat_link = KeyboardButton(text="Чат зі спікерами")
+        btn_contacts = KeyboardButton(text="Виникли запитання?")
 
         markup = ReplyKeyboardMarkup(resize_keyboard=True)
-        markup.add(btn_vacancy)
-        markup.add(btn_profile)
+        markup.add(btn_schedule)
+        markup.add(btn_info)
+        markup.add(btn_chat_link)
+        markup.add(btn_contacts)
 
         # MOCK
 
@@ -92,7 +95,7 @@ class UserSection(Section):
 
         self.bot.send_message(
             user.chat_id,
-            text="start menu",
+            text="Вибери команду з списку)",
             reply_markup=markup,
         )
 

@@ -81,10 +81,18 @@ class UserSection(Section):
         markup.add(btn_vacancy)
         markup.add(btn_profile)
 
-        self.bot.send_photo(
+        # MOCK
+
+        # self.bot.send_photo(
+        #     user.chat_id,
+        #     caption=ejf.content.user_start_text,
+        #     photo=ejf.content.user_start_photo,
+        #     reply_markup=markup,
+        # )
+
+        self.bot.send_message(
             user.chat_id,
-            caption=ejf.content.user_start_text,
-            photo=ejf.content.user_start_photo,
+            text="start menu",
             reply_markup=markup,
         )
 

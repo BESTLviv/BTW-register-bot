@@ -116,12 +116,12 @@ def handle_text_buttons(message):
 def send_welcome_message_and_start_quiz(user: User):
     ejf = data.get_btw()
     # MOCK
-    # welcome_text = ejf.content.start_text
+    welcome_text = ejf.content.start_text
     # welcome_photo = ejf.content.start_photo
 
     # bot.send_photo(user.chat_id, photo=welcome_photo, caption=welcome_text)
 
-    welcome_text = "hello"
+    # welcome_text = "hello"
     bot.send_message(user.chat_id, text=welcome_text)
 
     final_func = user_section.send_start_menu

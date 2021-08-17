@@ -1,9 +1,8 @@
 from telebot.types import CallbackQuery, InlineKeyboardButton, InlineKeyboardMarkup
 from telebot import logger
 
-from ..data import Data, User, JobFair, Company, Vacancy
+from ..data import Data, User, BTW
 from .section import Section
-from ..objects import company as company_module, vacancy as vacancy_module
 from ..staff import utils
 
 
@@ -40,44 +39,6 @@ class AdminSection(Section):
         elif action == "Statistic":
             self.send_statistic(call, user)
 
-        elif action == "CVMenu":
-            self.send_cv_menu(call, user)
-
-        elif action == "CVDownloadNew":
-            self.bot.answer_callback_query(call.id)
-            self.send_cv_archive(call=call, user=user, update=True)
-
-        elif action == "CVDownloadLast":
-            self.send_cv_archive(call=call, user=user, update=False)
-
-        elif action == "CompanyList":
-            self.send_company_list(user, call)
-
-        elif action == "CompanyDetails":
-            self.send_company_info(call, user)
-
-        elif action == "CompanyKey":
-            company_id = call.data.split(";")[3]
-            self.send_company_key(user, company_id)
-
-        elif action == "CompanyAdd":
-            self.add_new_company(user)
-
-        elif action == "VacancyList":
-            self.send_vacancy_list(call, user)
-
-        elif action == "VacancyInfo":
-            self.send_vacancy_info(call, user)
-
-        elif action == "DeleteVacancy":
-            self.delete_vacancy(call, user)
-
-        elif action == "ChangeVacancyStatus":
-            self.change_vacancy_status(call, user)
-
-        elif action == "VacancyStatistics":
-            self.send_vacancy_statistics(call, user)
-
         else:
             self.answer_in_development(call)
 
@@ -104,112 +65,20 @@ class AdminSection(Section):
                 reply_markup=self.admin_markup,
             )
 
-    def send_company_list(self, user: User, call: CallbackQuery = None):
-        text = "Оберіть компанію для перегляду детальної інформації."
-
-        company_list_markup = self._form_company_list_markup()
-
-        if call is None:
-            self.bot.send_photo(
-                chat_id=user.chat_id,
-                caption=text,
-                photo=self.ADMIN_MENU_PHOTO,
-                reply_markup=company_list_markup,
-            )
-        else:
-            self.send_message(
-                call,
-                text,
-                photo=self.ADMIN_MENU_PHOTO,
-                reply_markup=company_list_markup,
-            )
-
-    def send_company_info(self, call: CallbackQuery, user: User):
-        (
-            company_id,
-            company_photo,
-            company_description,
-        ) = company_module.form_company_description(call)
-        markup = self._form_company_menu_markup(company_id=company_id)
-
-        self.send_message(
-            call, company_description, photo=company_photo, reply_markup=markup
-        )
-
-    def send_company_key(self, user: User, company_id: str):
-        company_key = f"login_{Company.objects.with_id(company_id).token}"
-
-        self.bot.send_message(user.chat_id, text=company_key)
-
-    def add_new_company(self, user: User):
-        company_module.start_add_company_quiz(user, self.bot, self.send_company_list)
-
-    def send_vacancy_list(self, call: CallbackQuery, user: User):
-        text = "Вакансії"
-        company_id = call.data.split(";")[3]
-        company = Company.objects.with_id(company_id)
-
-        vacancy_list_markup = InlineKeyboardMarkup()
-        vacancy_list = Vacancy.objects.filter(company=company)
-        for vacancy in vacancy_list:
-            vacancy_text = vacancy.name
-            vacancy_callback = self.form_admin_callback(
-                action="VacancyInfo", vacancy_id=vacancy.id, edit=True
-            )
-            vacancy_button = InlineKeyboardButton(
-                text=vacancy_text, callback_data=vacancy_callback
-            )
-            vacancy_list_markup.add(vacancy_button)
-
-        btn_callback = self.form_admin_callback(
-            action="CompanyDetails", company_id=company.id, edit=True
-        )
-        btn_back = self.create_back_button(btn_callback)
-        vacancy_list_markup.add(btn_back)
-
-        self.send_message(
-            call, text=text, photo=company.photo_id, reply_markup=vacancy_list_markup
-        )
-
-    def send_vacancy_info(self, call: CallbackQuery, user: User):
-        vacancy_id = call.data.split(";")[4]
-        vacancy = Vacancy.objects.with_id(vacancy_id)
-
-        company_photo = vacancy.company.photo_id
-
-        vacancy_description = vacancy_module.form_vacancy_info(vacancy=vacancy, status=True)
-        markup = self._form_vacancy_menu_markup(vacancy)
-
-        self.send_message(
-            call, photo=company_photo, text=vacancy_description, reply_markup=markup
-        )
-
-    def delete_vacancy(self, call: CallbackQuery, user: User):
-        vacancy_id = call.data.split(";")[4]
-        vacancy = Vacancy.objects.with_id(vacancy_id)
-
-        result = vacancy_module.delete_vacancy(vacancy)
-
-        # change call callback data to send previous menu
-        call.data = self.form_admin_callback(
-            action="CompanyDetails", company_id=vacancy.company.id, edit=True
-        )
-
-        self.bot.answer_callback_query(call.id, text=result)
-
-        self.send_vacancy_list(call, user)
-
-    def change_vacancy_status(self, call: CallbackQuery, user: User):
-        vacancy_id = call.data.split(";")[4]
-
-        vac = Vacancy.objects.with_id(vacancy_id)
-        vacancy_module.change_vacancy_status(vac)
-
-        self.send_vacancy_info(call, user)
-
-    def send_vacancy_statistics(self, call: CallbackQuery, user: User):
-        # TODO
+    def send_statistic(self, call: CallbackQuery, user: User):
         self.answer_in_development(call)
+
+
+    def mail_all(self, user: User):
+        text = (
+            "Надішли повідомлення яке потрібно розіслати всім\n\n"
+            "Якщо потрібно вставити кнопку-посилання, то в останньому рядку тексту напиши посилання формату <b>https... ->btn_name</b>"
+        )
+
+        self.bot.send_message(user.chat_id, text=text)
+        self.bot.register_next_step_handler_by_chat_id(
+            user.chat_id, self._process_mail_users, auditory="all", user=user
+        )
 
     def send_mailing_menu(self, call: CallbackQuery, user: User):
         chat_id = user.chat_id
@@ -227,49 +96,6 @@ class AdminSection(Section):
         markup = self._form_mailing_markup()
 
         self.send_message(call, text, photo=self.ADMIN_MENU_PHOTO, reply_markup=markup)
-
-    def send_statistic(self, call: CallbackQuery, user: User):
-        self.answer_in_development(call)
-
-    def send_cv_menu(self, call: CallbackQuery, user: User):
-        text = self._form_cv_menu_text()
-        markup = self._form_cv_menu_markup()
-
-        self.send_message(
-            call, text=text, photo=self.ADMIN_MENU_PHOTO, reply_markup=markup
-        )
-
-    def send_cv_archive(self, call: CallbackQuery, user: User, update: bool = False):
-        ejf = self.data.get_ejf()
-        chat_id = user.chat_id
-
-        if update:
-            utils.form_and_send_new_cv_archive(bot=self.bot, user=user)
-
-        else:
-            last_cv_zip_list = ejf.cv_archive_file_id_list
-
-            if last_cv_zip_list:
-                for archive in last_cv_zip_list:
-                    self.bot.send_chat_action(chat_id, action="upload_document")
-                    self.bot.send_document(chat_id=chat_id, data=archive)
-                    self.bot.answer_callback_query(call.id)
-
-            else:
-                self.bot.answer_callback_query(
-                    call.id, text="Архів ні разу не оновлювався!"
-                )
-
-    def mail_all(self, user: User):
-        text = (
-            "Надішли повідомлення яке потрібно розіслати всім\n\n"
-            "Якщо потрібно вставити кнопку-посилання, то в останньому рядку тексту напиши посилання формату <b>https... ->btn_name</b>"
-        )
-
-        self.bot.send_message(user.chat_id, text=text)
-        self.bot.register_next_step_handler_by_chat_id(
-            user.chat_id, self._process_mail_users, auditory="all", user=user
-        )
 
     def mail_me_test(self, user: User):
         text = (
@@ -440,18 +266,6 @@ class AdminSection(Section):
 
         return admin_markup
 
-    def _form_cv_menu_text(self) -> str:
-        ejf = self.data.get_ejf()
-
-        current_cv_number = self.data.get_cv_count()
-
-        cv_menu_text = (
-            f"<b>Загальна кількість загружених CV</b> - {current_cv_number}\n\n"
-            f"<b>Останній час оновлення архіву</b> - {ejf.cv_archive_last_update}\n"
-            f"<b>Кількість CV</b> - {ejf.cv_archive_size}"
-        )
-
-        return cv_menu_text
 
     def _form_cv_menu_markup(self) -> InlineKeyboardMarkup:
         cv_menu_markup = InlineKeyboardMarkup()
@@ -475,29 +289,6 @@ class AdminSection(Section):
 
         return cv_menu_markup
 
-    def _form_company_list_markup(self) -> InlineKeyboardMarkup:
-
-        company_list_markup = InlineKeyboardMarkup()
-
-        for company in Company.objects:
-            btn_text = company.name
-            btn_callback = self.form_admin_callback(
-                action="CompanyDetails", company_id=company.id, edit=True
-            )
-            btn = InlineKeyboardButton(text=btn_text, callback_data=btn_callback)
-            company_list_markup.add(btn)
-
-        # Add new & back buttons
-        btn_callback = self.form_admin_callback(action="AdminMenu", edit=True)
-        btn_back = self.create_back_button(btn_callback)
-
-        btn_text = "Добавити компанію"
-        btn_callback = self.form_admin_callback(action="CompanyAdd", new=True)
-        btn_add_company = InlineKeyboardButton(btn_text, callback_data=btn_callback)
-
-        company_list_markup.add(btn_back, btn_add_company)
-
-        return company_list_markup
 
     def _form_company_menu_markup(self, company_id) -> InlineKeyboardMarkup:
 
@@ -529,60 +320,6 @@ class AdminSection(Section):
 
         return company_menu_markup
 
-    def _form_vacancy_menu_markup(self, vacancy: Vacancy) -> InlineKeyboardMarkup:
-
-        vacancy_menu_markup = InlineKeyboardMarkup()
-
-        company_id = vacancy.company.id
-
-        # full info
-        full_info_btn = vacancy_module.create_vacancy_telegraph_page_button(vacancy)
-        vacancy_menu_markup.add(full_info_btn)
-
-        # delete vacancy
-        btn_text = "Видалити вакансію"
-        btn_callback = self.form_admin_callback(
-            action="DeleteVacancy",
-            vacancy_id=vacancy_id,
-            delete=True,
-        )
-        delete_vacancy_btn = InlineKeyboardButton(
-            text=btn_text, callback_data=btn_callback
-        )
-        vacancy_menu_markup.add(delete_vacancy_btn)
-
-        # on\off
-        if vacancy.is_active:
-            btn_text = "Дезактивувати"
-        else:
-            btn_text = "Активувати"
-        btn_callback = self.form_admin_callback(
-            action="ChangeVacancyStatus", vacancy_id=vacancy_id, edit=True
-        )
-        change_state_btn = InlineKeyboardButton(
-            text=btn_text, callback_data=btn_callback
-        )
-        vacancy_menu_markup.add(change_state_btn)
-
-        # statistics
-        btn_text = "Статистика"
-        btn_callback = self.form_admin_callback(
-            action="VacancyStatistics", vacancy_id=vacancy_id, edit=True
-        )
-        vacancy_statistics_btn = InlineKeyboardButton(
-            text=btn_text, callback_data=btn_callback
-        )
-        vacancy_menu_markup.add(vacancy_statistics_btn)
-
-        vacancy = Vacancy.objects.with_id(vacancy_id)
-        company = vacancy.company
-        btn_callback = self.form_admin_callback(
-            action="VacancyList", company_id=company.id, edit=True
-        )
-        btn_back = self.create_back_button(btn_callback)
-        vacancy_menu_markup.add(btn_back)
-
-        return vacancy_menu_markup
 
     def _form_mailing_markup(self) -> InlineKeyboardMarkup:
         markup = InlineKeyboardMarkup()

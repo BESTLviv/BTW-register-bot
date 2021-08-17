@@ -17,14 +17,14 @@ class Data:
         print("connection success ")
 
         # if there is no ejf table in DB - then create it
-        if len(JobFair.objects) == 0:
+        if len(BTW.objects) == 0:
             self.reinit_ejf_table()
             print("ejf and content tables have been initialized")
         # if there was table already
         else:
             self.update_ejf_table()
 
-        self.ADMIN_PASSWORD = self.get_ejf().admin_password
+        self.ADMIN_PASSWORD = self.get_btw().admin_password
 
         # if there is no quiz table in DB - then create it
         self.add_quizes()
@@ -149,7 +149,7 @@ class Data:
 
     def reinit_ejf_table(self):
         # delete collections
-        JobFair.objects.delete()
+        BTW.objects.delete()
         Content.objects.delete()
 
         # create content table
@@ -168,7 +168,7 @@ class Data:
         content.save()
 
         # create ejf table
-        ejf = JobFair()
+        ejf = BTW()
         ejf.admin_password = "admin"
         ejf.start_menu = [  ##### Тут можна розмістити спікерів (думаю що наввіть ТРЕБА)
             SimpleButton(
@@ -225,11 +225,11 @@ class Data:
         ]
         ejf.content = content
         ejf.start_datetime = datetime(2021, 5, 19, 10, 0, 0)
-        ejf.end_datetime = self.JOB_FAIR_END_TIME
+        # ejf.end_datetime = self.JOB_FAIR_END_TIME
         ejf.save()
 
     def update_ejf_table(self):
-        ejf = self.get_ejf()
+        ejf = self.get_btw()
 
         # form paragraphs in ejf menu
         for btn in ejf.start_menu:
@@ -254,8 +254,8 @@ class Data:
 
             quiz.save()
 
-    def get_ejf(self):
-        return JobFair.objects.first()
+    def get_btw(self):
+        return BTW.objects.first()
 
 
 class Content(me.Document):
@@ -273,7 +273,7 @@ class SimpleButton(me.EmbeddedDocument):
     url_text = me.StringField()
 
 
-class JobFair(me.Document):
+class BTW(me.Document):
     admin_password = me.StringField()
     start_menu = me.ListField(me.EmbeddedDocumentField(SimpleButton), default=list())
     content = me.ReferenceField(Content)

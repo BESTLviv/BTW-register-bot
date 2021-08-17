@@ -4,13 +4,13 @@ from telebot.types import (
     InlineKeyboardButton,
     InlineKeyboardMarkup,
 )
-from ..data import User, Data, JobFair
+from ..data import User, Data, BTW
 from ..objects import quiz
 from ..sections.section import Section
 from ..staff import utils
 
 
-class JobFairSection(Section):
+class BTWSection(Section):
     def __init__(self, data: Data):
         super().__init__(data)
 
@@ -20,7 +20,7 @@ class JobFairSection(Section):
         self.send_button_content(user, text)
 
     def send_start_menu(self, user: User):
-        ejf = self.data.get_ejf()
+        ejf = self.data.get_btw()
         self.TEXT_BUTTONS = self._get_start_button_names(ejf)
 
         start_message = ejf.content.ejf_start_text
@@ -35,7 +35,7 @@ class JobFairSection(Section):
         )
 
     def send_button_content(self, user: User, btn_text: str):
-        ejf = self.data.get_ejf()
+        ejf = self.data.get_btw()
 
         for btn in ejf.start_menu:
             if btn.name == btn_text:
@@ -54,9 +54,9 @@ class JobFairSection(Section):
                     reply_markup=markup,
                 )
 
-    def _get_start_button_names(self, ejf: JobFair = None) -> list:
+    def _get_start_button_names(self, ejf: BTW = None) -> list:
         if ejf is None:
-            ejf = self.data.get_ejf()
+            ejf = self.data.get_btw()
 
         button_names = list()
 

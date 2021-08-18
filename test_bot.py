@@ -3,7 +3,7 @@ from telebot import TeleBot
 
 from typing import Callable
 
-from src.data import User, BTW, Data
+from src.data import User, Data
 
 
 help_msg = (

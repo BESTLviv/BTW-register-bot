@@ -74,8 +74,8 @@ def send_question(
     answer_markup = _create_answer_markup(question, is_required=is_required)
 
     # do not send it if answer was wrong
-    if is_first_try:
-        bot.send_message(chat_id, text, reply_markup=answer_markup)
+
+    bot.send_message(chat_id, text, reply_markup=answer_markup)
 
     bot.register_next_step_handler_by_chat_id(
         chat_id,

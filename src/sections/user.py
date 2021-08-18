@@ -93,9 +93,10 @@ class UserSection(Section):
         #     reply_markup=markup,
         # )
 
-        self.bot.send_message(
+        self.bot.send_photo(
             user.chat_id,
-            text="Вибери команду з списку)",
+            caption="Вибери команду з списку)",
+            photo="AgACAgIAAxkBAAIBamEcllsyg1TiygG-0SHs_Pzg3Qk4AAJ3tjEbp3DpSDnC36SJ31ADAQADAgADeAADIAQ",
             reply_markup=markup,
         )
 
@@ -113,7 +114,26 @@ class UserSection(Section):
         else:
             self.send_message(call, text=text_message, reply_markup=markup)
 
+    def send_speakers_info_menu(self, user: User):
+        btn_sp1 = KeyboardButton(text="Speaker 1",)
+        btn_sp2 = KeyboardButton(text="Speaker 2")
+        btn_sp3 = KeyboardButton(text="Speaker 3")
+        btn_sp4 = KeyboardButton(text="Speaker 4")
+        btn_sp5 = KeyboardButton(text="Speaker 5")
+        btn_sp6 = KeyboardButton(text="Speaker 6")
+        btn_sp7 = KeyboardButton(text="Speaker 7")
+        btn_sp8 = KeyboardButton(text="Speaker 8")
+        btn_sp9 = KeyboardButton(text="Speaker 9")
+        btn_back = KeyboardButton(text="Назад")
 
+        markup = ReplyKeyboardMarkup(resize_keyboard=True)
+
+        markup.row(btn_sp1,btn_sp2,btn_sp3)
+        markup.row(btn_sp4,btn_sp5,btn_sp6)
+        markup.row(btn_sp7,btn_sp8,btn_sp9)
+
+        markup.add(btn_back)
+        self.bot.send_message(user.chat_id,text="Тиць по спікеру щоб дізнатись про нього", reply_markup=markup)
 
     def send_about_info(self, user: User):
         self.bot.send_message(user.chat_id, text="Test")

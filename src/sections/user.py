@@ -8,7 +8,6 @@ from ..data import Data, User
 
 
 class UserSection(Section):
-    TEXT_BUTTONS = ["Найти вакансію", "Хто ми?", "Профіль"]
 
     def __init__(self, data: Data):
         super().__init__(data=data)
@@ -28,7 +27,7 @@ class UserSection(Section):
         self.bot.send_photo(
             user.chat_id,
             caption="Вибери команду з списку)",
-            photo="AgACAgIAAxkBAAIBamEcllsyg1TiygG-0SHs_Pzg3Qk4AAJ3tjEbp3DpSDnC36SJ31ADAQADAgADeAADIAQ",
+            photo="https://ibb.co/Y21d3Yc",
             reply_markup=markup,
         )
 

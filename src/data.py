@@ -136,6 +136,7 @@ class User(me.Document):
     username = me.StringField(required=True)
     additional_info = me.DictField(default=None)
     registration_date = me.DateTimeField(required=True)
+    register_source = me.StringField(default="Unknown")
     last_update_date = me.DateTimeField(required=True)
     last_interaction_date = me.DateTimeField(required=True)
     is_blocked = me.BooleanField(default=False)

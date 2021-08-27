@@ -27,19 +27,19 @@ class UserSection(Section):
         self.bot.send_photo(
             user.chat_id,
             caption="Вибери команду з списку)",
-            photo="https://ibb.co/Y21d3Yc",
+            photo="https://ibb.co/BLZNq1q",
             reply_markup=markup,
         )
 
     def send_speakers_info_menu(self, user: User):
-        btn_sp1 = KeyboardButton(text="Speaker 1", )
-        btn_sp2 = KeyboardButton(text="Speaker 2")
-        btn_sp3 = KeyboardButton(text="Speaker 3")
-        btn_sp4 = KeyboardButton(text="Speaker 4")
-        btn_sp5 = KeyboardButton(text="Speaker 5")
-        btn_sp6 = KeyboardButton(text="Speaker 6")
-        btn_sp7 = KeyboardButton(text="Speaker 7")
-        btn_sp8 = KeyboardButton(text="Speaker 8")
+        btn_sp1 = KeyboardButton(text="Ірина Клейменова", )
+        btn_sp2 = KeyboardButton(text="Інна Шинкаренко")
+        btn_sp3 = KeyboardButton(text="Орест Дмитрасевич")
+        btn_sp4 = KeyboardButton(text="Михайло Дубчак")
+        btn_sp5 = KeyboardButton(text="Роксолана Салашник")
+        btn_sp6 = KeyboardButton(text="Софія Телішевська")
+        btn_sp7 = KeyboardButton(text="Христина Мокрій")
+        btn_sp8 = KeyboardButton(text="Назар Подольчак")
         btn_sp9 = KeyboardButton(text="Speaker 9")
         btn_back = KeyboardButton(text="Назад")
 

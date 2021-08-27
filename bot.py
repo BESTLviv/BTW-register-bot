@@ -89,41 +89,41 @@ def handle_text_buttons(message):
     elif message_text == "Виникли запитання?":
         bot.send_message(user.chat_id, text="Звернись до нашого головного організатора @kerril", reply_markup=markup)
 
-    if message_text == "Speaker 1":
+    if message_text == "Ірина Клейменова":
         bot.send_photo(user.chat_id,
-                       photo="AgACAgIAAxkBAAIBemEcmIIW2mJ7-oRmGBQmiIus65HNAAJ6tjEbp3DpSBfc5Q4tmfS7AQADAgADeAADIAQ",
+                       photo="https://ibb.co/njF9Vw6",
                        caption="Info speaker 1")
-    elif message_text == "Speaker 2":
+    elif message_text == "Інна Шинкаренко":
         bot.send_photo(user.chat_id,
                        photo="AgACAgIAAxkBAAIBemEcmIIW2mJ7-oRmGBQmiIus65HNAAJ6tjEbp3DpSBfc5Q4tmfS7AQADAgADeAADIAQ",
                        caption="Info speaker 2")
-    elif message_text == "Speaker 3":
+    elif message_text == "Орест Дмитрасевич":
         bot.send_photo(user.chat_id,
-                       photo="AgACAgIAAxkBAAIBemEcmIIW2mJ7-oRmGBQmiIus65HNAAJ6tjEbp3DpSBfc5Q4tmfS7AQADAgADeAADIAQ",
+                       photo="https://ibb.co/tp9NcTR",
                        caption="Info speaker 3")
-    elif message_text == "Speaker 4":
+    elif message_text == "Михайло Дубчак":
         bot.send_photo(user.chat_id,
-                       photo="AgACAgIAAxkBAAIBemEcmIIW2mJ7-oRmGBQmiIus65HNAAJ6tjEbp3DpSBfc5Q4tmfS7AQADAgADeAADIAQ",
+                       photo="https://ibb.co/wr109DQ",
                        caption="Info speaker 4")
-    elif message_text == "Speaker 5":
+    elif message_text == "Роксолана Салашник":
         bot.send_photo(user.chat_id,
-                       photo="AgACAgIAAxkBAAIBemEcmIIW2mJ7-oRmGBQmiIus65HNAAJ6tjEbp3DpSBfc5Q4tmfS7AQADAgADeAADIAQ",
+                       photo="https://ibb.co/Nx73zDv",
                        caption="Info speaker 5")
-    elif message_text == "Speaker 6":
+    elif message_text == "Софія Телішевська":
         bot.send_photo(user.chat_id,
-                       photo="AgACAgIAAxkBAAIBemEcmIIW2mJ7-oRmGBQmiIus65HNAAJ6tjEbp3DpSBfc5Q4tmfS7AQADAgADeAADIAQ",
+                       photo="https://ibb.co/dcZd42k",
                        caption="Info speaker 6")
-    elif message_text == "Speaker 7":
+    elif message_text == "Христина Мокрій":
         bot.send_photo(user.chat_id,
                        photo="AgACAgIAAxkBAAIBemEcmIIW2mJ7-oRmGBQmiIus65HNAAJ6tjEbp3DpSBfc5Q4tmfS7AQADAgADeAADIAQ",
                        caption="Info speaker 7")
-    elif message_text == "Speaker 8":
+    elif message_text == "Назар Подольчак":
         bot.send_photo(user.chat_id,
-                       photo="AgACAgIAAxkBAAIBemEcmIIW2mJ7-oRmGBQmiIus65HNAAJ6tjEbp3DpSBfc5Q4tmfS7AQADAgADeAADIAQ",
+                       photo="https://ibb.co/Y2Tz7PG",
                        caption="Info speaker 8")
-    elif message_text == "Speaker 9":
+    elif message_text == "Марго Васильєва":
         bot.send_photo(user.chat_id,
-                       photo="AgACAgIAAxkBAAIBemEcmIIW2mJ7-oRmGBQmiIus65HNAAJ6tjEbp3DpSBfc5Q4tmfS7AQADAgADeAADIAQ",
+                       photo="https://ibb.co/0VGtbqB",
                        caption="Info speaker 9")
     elif message_text == "Назад":
         user_section.send_start_menu(user)

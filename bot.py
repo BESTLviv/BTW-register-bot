@@ -92,27 +92,27 @@ def handle_text_buttons(message):
     if message_text == "Ірина Клейменова":
         bot.send_photo(user.chat_id,
                        photo="https://ibb.co/njF9Vw6",
-                       caption="Info speaker 1")
+                       caption="HR-спеціалістка компанії Fairmarkit. Активістка та волонтерка. Ірина розкаже як новенькі входять в IT та дасть поради початківцям.")
     elif message_text == "Інна Шинкаренко":
         bot.send_photo(user.chat_id,
                        photo="AgACAgIAAxkBAAIBemEcmIIW2mJ7-oRmGBQmiIus65HNAAJ6tjEbp3DpSBfc5Q4tmfS7AQADAgADeAADIAQ",
-                       caption="Info speaker 2")
+                       caption="Психологиня, яка допомагає людям відчути і побачити себе. Консультантка терапевтичного проєкту “Точка відліку”. На тренінгу Інна розкаже про емоційне вигорання та допоможе його уникнути.")
     elif message_text == "Орест Дмитрасевич":
         bot.send_photo(user.chat_id,
                        photo="https://ibb.co/tp9NcTR",
-                       caption="Info speaker 3")
+                       caption="Program manager в українській IT-компанії ELEKS. Автор найбільшого блогу в Україні про product management Kaizen.Орест розкаже як починав свій кар’єрний шлях project-менеджера та як досягти успіху в цій сфері.")
     elif message_text == "Михайло Дубчак":
         bot.send_photo(user.chat_id,
                        photo="https://ibb.co/wr109DQ",
-                       caption="Info speaker 4")
+                       caption="Таргетолог-стратег. Запускає рекламу, яка дійсно приносить прибуток. Знімає цікаві відеоуроки по SMM і таргету на Youtube. Співзасновник агентства ADC Wind. Михайло розкаже про професію таргетолога та про роль таргетованої реклами в онлайн-маркетингу.")
     elif message_text == "Роксолана Салашник":
         bot.send_photo(user.chat_id,
                        photo="https://ibb.co/Nx73zDv",
-                       caption="Info speaker 5")
+                       caption="Спеціалістка з області SMM та маркетингу. Visual content-maker, яка навчить тебе як мислити красиво. Веде інформативний блог в Instagram.Розповість, чому особистий бренд - це нафта 2021 року.")
     elif message_text == "Софія Телішевська":
         bot.send_photo(user.chat_id,
                        photo="https://ibb.co/dcZd42k",
-                       caption="Info speaker 6")
+                       caption="Політична журналістка. Авторка власної telegram-групи Медіашпиталь. Софія доступно розкаже як простими словами розповідати про складні речі.")
     elif message_text == "Христина Мокрій":
         bot.send_photo(user.chat_id,
                        photo="AgACAgIAAxkBAAIBemEcmIIW2mJ7-oRmGBQmiIus65HNAAJ6tjEbp3DpSBfc5Q4tmfS7AQADAgADeAADIAQ",
@@ -120,11 +120,11 @@ def handle_text_buttons(message):
     elif message_text == "Назар Подольчак":
         bot.send_photo(user.chat_id,
                        photo="https://ibb.co/Y2Tz7PG",
-                       caption="Info speaker 8")
+                       caption="Професор та доктор економічних наук. Засновник спеціалізованої школи Tech StartUp School. Завідувач кафедри адміністративного та фінансового менеджменту у Львівській політехніці.")
     elif message_text == "Марго Васильєва":
         bot.send_photo(user.chat_id,
                        photo="https://ibb.co/0VGtbqB",
-                       caption="Info speaker 9")
+                       caption="Дівчина-мандрівниця, яка подолала понад 41 000 км. Одна із засновниць спільноти Бакотиків - групи різних мандрівників та автостоперів, які подорожують Україною та діляться власними враженнями.Марго розкаже як подорожувати автостопом та дасть поради.")
     elif message_text == "Назад":
         user_section.send_start_menu(user)
 

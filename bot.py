@@ -92,27 +92,27 @@ def handle_text_buttons(message):
     if message_text == "Ірина Клейменова":
         bot.send_photo(user.chat_id,
                        photo="https://ibb.co/njF9Vw6",
-                       caption="HR-спеціалістка компанії Fairmarkit. Активістка та волонтерка. Ірина розкаже як новенькі входять в IT та дасть поради початківцям. \n ""<a href='https://www.google.com/'>Google</a>")
+                       caption="HR-спеціалістка компанії Fairmarkit. Активістка та волонтерка. Ірина розкаже як новенькі входять в IT та дасть поради початківцям. \n""<a href='https://www.facebook.com/iryna.kleimenova'>Facebook</a>|<a href='https://www.facebook.com/iryna.kleimenova'>Linkedin</a>")
     elif message_text == "Інна Шинкаренко":
         bot.send_photo(user.chat_id,
                        photo="AgACAgIAAxkBAAIBemEcmIIW2mJ7-oRmGBQmiIus65HNAAJ6tjEbp3DpSBfc5Q4tmfS7AQADAgADeAADIAQ",
-                       caption="Психологиня, яка допомагає людям відчути і побачити себе. Консультантка терапевтичного проєкту “Точка відліку”. На тренінгу Інна розкаже про емоційне вигорання та допоможе його уникнути.")
+                       caption="Психологиня, яка допомагає людям відчути і побачити себе. Консультантка терапевтичного проєкту “Точка відліку”. На тренінгу Інна розкаже про емоційне вигорання та допоможе його уникнути. \n""<a href='https://www.facebook.com/iryna.kleimenova'>Facebook</a>|<a href='https://www.linkedin.com/in/inna-shynkarenko-4814525/'>Linkedin</a>|<a href='https://www.instagram.com/inkissh/'>Instagram</a>")
     elif message_text == "Орест Дмитрасевич":
         bot.send_photo(user.chat_id,
                        photo="https://ibb.co/tp9NcTR",
-                       caption="Program manager в українській IT-компанії ELEKS. Автор найбільшого блогу в Україні про product management Kaizen.Орест розкаже як починав свій кар’єрний шлях project-менеджера та як досягти успіху в цій сфері.")
+                       caption="Program manager в українській IT-компанії ELEKS. Автор найбільшого блогу в Україні про product management ""<a href='https://t.me/themanagerblog'>Kaizen</a>"".Орест розкаже як починав свій кар’єрний шлях project-менеджера та як досягти успіху в цій сфері. \n""<a href='https://www.facebook.com/o.dmytrasevych'>Facebook</a>|<a href='https://www.linkedin.com/in/odmytrasevych'>Linkedin</a>")
     elif message_text == "Михайло Дубчак":
         bot.send_photo(user.chat_id,
                        photo="https://ibb.co/SKXsyyc",
-                       caption="Таргетолог-стратег. Запускає рекламу, яка дійсно приносить прибуток. Знімає цікаві відеоуроки по SMM і таргету на Youtube. Співзасновник агентства ADC Wind. Михайло розкаже про професію таргетолога та про роль таргетованої реклами в онлайн-маркетингу.")
+                       caption="Таргетолог-стратег. Запускає рекламу, яка дійсно приносить прибуток. Знімає цікаві відеоуроки по SMM і таргету на ""<a href='https://www.youtube.com/channel/UCYXrY_QWuVGwQn5sAhhNwnw'>Youtube</a>"". Співзасновник агентства ADC Wind. Михайло розкаже про професію таргетолога та про роль таргетованої реклами в онлайн-маркетингу. \n""<a href='https://www.instagram.com/meta_marketer/'>Instagram</a>")
     elif message_text == "Роксолана Салашник":
         bot.send_photo(user.chat_id,
                        photo="https://ibb.co/yy9QqyG",
-                       caption="Спеціалістка з області SMM та маркетингу. Visual content-maker, яка навчить тебе як мислити красиво. Веде інформативний блог в Instagram.Розповість, чому особистий бренд - це нафта 2021 року.")
+                       caption="Спеціалістка з області SMM та маркетингу. Visual content-maker, яка навчить тебе як мислити красиво. Веде інформативний блог в Instagram.Розповість, чому особистий бренд - це нафта 2021 року. \n""<a href='https://www.instagram.com/romeka.stabl/'>Instagram</a>")
     elif message_text == "Софія Телішевська":
         bot.send_photo(user.chat_id,
                        photo="https://ibb.co/dcZd42k",
-                       caption="Політична журналістка. Авторка власної telegram-групи Медіашпиталь. Софія доступно розкаже як простими словами розповідати про складні речі.")
+                       caption="Політична журналістка. Авторка власної telegram-групи ""<a href='https://t.me/mediahospital'>Медіашпиталь</a>"". Софія доступно розкаже як простими словами розповідати про складні речі. \n""<a href='https://www.instagram.com/sonya_telishevska/'>Instagram</a>")
     elif message_text == "Христина Мокрій":
         bot.send_photo(user.chat_id,
                        photo="AgACAgIAAxkBAAIBemEcmIIW2mJ7-oRmGBQmiIus65HNAAJ6tjEbp3DpSBfc5Q4tmfS7AQADAgADeAADIAQ",
@@ -120,11 +120,11 @@ def handle_text_buttons(message):
     elif message_text == "Назар Подольчак":
         bot.send_photo(user.chat_id,
                        photo="https://ibb.co/Y2Tz7PG",
-                       caption="Професор та доктор економічних наук. Засновник спеціалізованої школи Tech StartUp School. Завідувач кафедри адміністративного та фінансового менеджменту у Львівській політехніці.")
+                       caption="Професор та доктор економічних наук. Засновник спеціалізованої школи Tech StartUp School. Завідувач кафедри адміністративного та фінансового менеджменту у Львівській політехніці. \n""<a href='https://www.facebook.com/nazarpodolchak'>Facebook</a>|<a href='https://www.linkedin.com/in/nazar-podolchak-36b30b47/'>Linkedin</a>|<a href='https://www.instagram.com/nazarpodolchak/'>Instagram</a>")
     elif message_text == "Марго Васильєва":
         bot.send_photo(user.chat_id,
                        photo="https://ibb.co/0VGtbqB",
-                       caption="Дівчина-мандрівниця, яка подолала понад 41 000 км. Одна із засновниць спільноти Бакотиків - групи різних мандрівників та автостоперів, які подорожують Україною та діляться власними враженнями.Марго розкаже як подорожувати автостопом та дасть поради.")
+                       caption="Дівчина-мандрівниця, яка подолала понад 41 000 км. Одна із засновниць спільноти ""<a href='https://t.me/zlit_dzrhch'>Бакотиків</a>""- групи різних мандрівників та автостоперів, які подорожують Україною та діляться власними враженнями.Марго розкаже як подорожувати автостопом та дасть поради. \n""<a href='https://instagram.com/margo.v66?utm_medium=copy_link'>Instagram</a>")
     elif message_text == "Назад":
         user_section.send_start_menu(user)
 

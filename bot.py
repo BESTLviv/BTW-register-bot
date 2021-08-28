@@ -103,11 +103,11 @@ def handle_text_buttons(message):
                        caption="Program manager в українській IT-компанії ELEKS. Автор найбільшого блогу в Україні про product management Kaizen.Орест розкаже як починав свій кар’єрний шлях project-менеджера та як досягти успіху в цій сфері.")
     elif message_text == "Михайло Дубчак":
         bot.send_photo(user.chat_id,
-                       photo="https://ibb.co/wr109DQ",
+                       photo="https://ibb.co/SKXsyyc",
                        caption="Таргетолог-стратег. Запускає рекламу, яка дійсно приносить прибуток. Знімає цікаві відеоуроки по SMM і таргету на Youtube. Співзасновник агентства ADC Wind. Михайло розкаже про професію таргетолога та про роль таргетованої реклами в онлайн-маркетингу.")
     elif message_text == "Роксолана Салашник":
         bot.send_photo(user.chat_id,
-                       photo="https://ibb.co/Nx73zDv",
+                       photo="https://ibb.co/yy9QqyG",
                        caption="Спеціалістка з області SMM та маркетингу. Visual content-maker, яка навчить тебе як мислити красиво. Веде інформативний блог в Instagram.Розповість, чому особистий бренд - це нафта 2021 року.")
     elif message_text == "Софія Телішевська":
         bot.send_photo(user.chat_id,

@@ -40,7 +40,7 @@ class UserSection(Section):
         btn_sp6 = KeyboardButton(text="Софія Телішевська")
         btn_sp7 = KeyboardButton(text="Христина Мокрій")
         btn_sp8 = KeyboardButton(text="Назар Подольчак")
-        btn_sp9 = KeyboardButton(text="Speaker 9")
+        btn_sp9 = KeyboardButton(text="Марго Васильєва")
         btn_back = KeyboardButton(text="Назад")
 
         markup = ReplyKeyboardMarkup(resize_keyboard=True)

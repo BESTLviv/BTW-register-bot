@@ -95,7 +95,7 @@ def handle_text_buttons(message):
                        caption="HR-спеціалістка компанії Fairmarkit. Активістка та волонтерка. Ірина розкаже як новенькі входять в IT та дасть поради початківцям. \n""<a href='https://www.facebook.com/iryna.kleimenova'>Facebook</a>|<a href='https://www.facebook.com/iryna.kleimenova'>Linkedin</a>")
     elif message_text == "Інна Шинкаренко":
         bot.send_photo(user.chat_id,
-                       photo="AgACAgIAAxkBAAIBemEcmIIW2mJ7-oRmGBQmiIus65HNAAJ6tjEbp3DpSBfc5Q4tmfS7AQADAgADeAADIAQ",
+                       photo="https://ibb.co/DCKZTfs",
                        caption="Психологиня, яка допомагає людям відчути і побачити себе. Консультантка терапевтичного проєкту “Точка відліку”. На тренінгу Інна розкаже про емоційне вигорання та допоможе його уникнути. \n""<a href='https://www.facebook.com/iryna.kleimenova'>Facebook</a>|<a href='https://www.linkedin.com/in/inna-shynkarenko-4814525/'>Linkedin</a>|<a href='https://www.instagram.com/inkissh/'>Instagram</a>")
     elif message_text == "Орест Дмитрасевич":
         bot.send_photo(user.chat_id,
@@ -124,7 +124,7 @@ def handle_text_buttons(message):
     elif message_text == "Марго Васильєва":
         bot.send_photo(user.chat_id,
                        photo="https://ibb.co/0VGtbqB",
-                       caption="Дівчина-мандрівниця, яка подолала понад 41 000 км. Одна із засновниць спільноти ""<a href='https://t.me/zlit_dzrhch'>Бакотиків</a>""- групи різних мандрівників та автостоперів, які подорожують Україною та діляться власними враженнями.Марго розкаже як подорожувати автостопом та дасть поради. \n""<a href='https://instagram.com/margo.v66?utm_medium=copy_link'>Instagram</a>")
+                       caption="Дівчина-мандрівниця, яка подолала понад 41 000 км. Одна із засновниць спільноти ""<a href='https://t.me/zlit_dzrhch'>Бакотиків</a>"" - групи різних мандрівників та автостоперів, які подорожують Україною та діляться власними враженнями.Марго розкаже як подорожувати автостопом та дасть поради. \n""<a href='https://instagram.com/margo.v66?utm_medium=copy_link'>Instagram</a>")
     elif message_text == "Назад":
         user_section.send_start_menu(user)
 

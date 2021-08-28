@@ -92,7 +92,7 @@ def handle_text_buttons(message):
     if message_text == "Ірина Клейменова":
         bot.send_photo(user.chat_id,
                        photo="https://ibb.co/njF9Vw6",
-                       caption="HR-спеціалістка компанії Fairmarkit. Активістка та волонтерка. Ірина розкаже як новенькі входять в IT та дасть поради початківцям. [This is an example](https://google.com)")
+                       caption="HR-спеціалістка компанії Fairmarkit. Активістка та волонтерка. Ірина розкаже як новенькі входять в IT та дасть поради початківцям. \n ""<a href='https://www.google.com/'>Google</a>")
     elif message_text == "Інна Шинкаренко":
         bot.send_photo(user.chat_id,
                        photo="AgACAgIAAxkBAAIBemEcmIIW2mJ7-oRmGBQmiIus65HNAAJ6tjEbp3DpSBfc5Q4tmfS7AQADAgADeAADIAQ",

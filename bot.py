@@ -92,7 +92,7 @@ def handle_text_buttons(message):
     if message_text == "Ірина Клейменова":
         bot.send_photo(user.chat_id,
                        photo="https://ibb.co/njF9Vw6",
-                       caption="HR-спеціалістка компанії Fairmarkit. Активістка та волонтерка. Ірина розкаже як новенькі входять в IT та дасть поради початківцям. \n""<a href='https://www.facebook.com/iryna.kleimenova'>Facebook</a>|<a href='https://www.facebook.com/iryna.kleimenova'>Linkedin</a>")
+                       caption="HR-спеціалістка компанії Fairmarkit. Активістка та волонтерка. Ірина розкаже як новенькі входять в IT та дасть поради початківцям. \n""<a href='https://www.facebook.com/iryna.kleimenova'>Facebook</a>|<a href='https://www.linkedin.com/in/iryna-kley-10aaa41a5'>Linkedin</a>")
     elif message_text == "Інна Шинкаренко":
         bot.send_photo(user.chat_id,
                        photo="https://ibb.co/DCKZTfs",
@@ -116,7 +116,7 @@ def handle_text_buttons(message):
     elif message_text == "Христина Мокрій":
         bot.send_photo(user.chat_id,
                        photo="AgACAgIAAxkBAAIBemEcmIIW2mJ7-oRmGBQmiIus65HNAAJ6tjEbp3DpSBfc5Q4tmfS7AQADAgADeAADIAQ",
-                       caption="Info speaker 7")
+                       caption="Громадська діячка. Тренерка soft skills. Організаторка та декораторка подій. Фасилітаторка програми ""Активні громадяни"" від Британської ради. Менеджерка залучення ресурсів у Львівському обласному молодіжному центрі; Засновниця/голова у ГО ""Львівська майстерня організації подій"".\n""<a href='https://www.facebook.com/profile.php?id=100002246408610'>Facebook</a>|<a href='https://www.linkedin.com/in/%D1%85%D1%80%D0%B8%D1%81%D1%82%D0%B8%D0%BD%D0%B0-%D0%BC%D0%BE%D0%BA%D1%80%D1%96%D0%B9-211186119'>Linkedin</a>|<a href='https://instagram.com/k.mokrii?utm_medium=copy_link'>Instagram</a>")
     elif message_text == "Назар Подольчак":
         bot.send_photo(user.chat_id,
                        photo="https://ibb.co/Y2Tz7PG",

@@ -78,7 +78,7 @@ def handle_text_buttons(message):
 
     if message_text == "Розклад":
         bot.send_photo(user.chat_id, caption="Розклад цьогорічного BTW",
-                       photo="AgACAgIAAxkBAAIBcGEclsI-CSlvekp9zsphoXR7GwABggACebYxG6dw6UiZehC1A38tBQEAAwIAA3gAAyAE",
+                       photo="https://ibb.co/PwYsWpw",
                        reply_markup=markup)
     elif message_text == "Чат зі спікерами":
         bot.send_message(user.chat_id,

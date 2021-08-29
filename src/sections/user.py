@@ -24,12 +24,8 @@ class UserSection(Section):
         markup.add(btn_chat_link)
         markup.add(btn_contacts)
 
-        self.bot.send_photo(
-            user.chat_id,
-            caption="Вибери команду з списку)",
-            photo="https://ibb.co/BLZNq1q",
-            reply_markup=markup,
-        )
+        self.bot.send_message(user.chat_id, text="Вибери команду з списку)", reply_markup=markup)
+
 
     def send_speakers_info_menu(self, user: User):
         btn_sp1 = KeyboardButton(text="Ірина Клейменова", )

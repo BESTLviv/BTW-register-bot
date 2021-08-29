@@ -92,15 +92,15 @@ def handle_text_buttons(message):
     if message_text == "Ірина Клейменова":
         bot.send_photo(user.chat_id,
                        photo="https://ibb.co/njF9Vw6",
-                       caption="HR-спеціалістка компанії Fairmarkit. Активістка та волонтерка. Ірина розкаже як новенькі входять в IT та дасть поради початківцям. \n""<a href='https://www.facebook.com/iryna.kleimenova'>Facebook</a>|<a href='https://www.linkedin.com/in/iryna-kley-10aaa41a5'>Linkedin</a>")
+                       caption="HR-спеціалістка компанії Fairmarkit. Активістка та волонтерка. Ірина розкаже як новенькі входять в IT та дасть поради початківцям. \n""<a href='https://www.facebook.com/iryna.kleimenova'>Facebook</a> | <a href='https://www.linkedin.com/in/iryna-kley-10aaa41a5'>Linkedin</a>")
     elif message_text == "Інна Шинкаренко":
         bot.send_photo(user.chat_id,
                        photo="https://ibb.co/DCKZTfs",
-                       caption="Психологиня, яка допомагає людям відчути і побачити себе. Консультантка терапевтичного проєкту “Точка відліку”. На тренінгу Інна розкаже про емоційне вигорання та допоможе його уникнути. \n""<a href='https://www.facebook.com/iryna.kleimenova'>Facebook</a>|<a href='https://www.linkedin.com/in/inna-shynkarenko-4814525/'>Linkedin</a>|<a href='https://www.instagram.com/inkissh/'>Instagram</a>")
+                       caption="Психологиня, яка допомагає людям відчути і побачити себе. Консультантка терапевтичного проєкту “Точка відліку”. На тренінгу Інна розкаже про емоційне вигорання та допоможе його уникнути. \n""<a href='https://www.facebook.com/iryna.kleimenova'>Facebook</a> | <a href='https://www.linkedin.com/in/inna-shynkarenko-4814525/'>Linkedin</a> | <a href='https://www.instagram.com/inkissh/'>Instagram</a>")
     elif message_text == "Орест Дмитрасевич":
         bot.send_photo(user.chat_id,
                        photo="https://ibb.co/tp9NcTR",
-                       caption="Program manager в українській IT-компанії ELEKS. Автор найбільшого блогу в Україні про product management ""<a href='https://t.me/themanagerblog'>Kaizen</a>"".Орест розкаже як починав свій кар’єрний шлях project-менеджера та як досягти успіху в цій сфері. \n""<a href='https://www.facebook.com/o.dmytrasevych'>Facebook</a>|<a href='https://www.linkedin.com/in/odmytrasevych'>Linkedin</a>")
+                       caption="Program manager в українській IT-компанії ELEKS. Автор найбільшого блогу в Україні про product management ""<a href='https://t.me/themanagerblog'>Kaizen</a>"".Орест розкаже як починав свій кар’єрний шлях project-менеджера та як досягти успіху в цій сфері. \n""<a href='https://www.facebook.com/o.dmytrasevych'>Facebook</a> | <a href='https://www.linkedin.com/in/odmytrasevych'>Linkedin</a>")
     elif message_text == "Михайло Дубчак":
         bot.send_photo(user.chat_id,
                        photo="https://ibb.co/SKXsyyc",
@@ -116,11 +116,11 @@ def handle_text_buttons(message):
     elif message_text == "Христина Мокрій":
         bot.send_photo(user.chat_id,
                        photo="AgACAgIAAxkBAAIBemEcmIIW2mJ7-oRmGBQmiIus65HNAAJ6tjEbp3DpSBfc5Q4tmfS7AQADAgADeAADIAQ",
-                       caption="Громадська діячка. Тренерка soft skills. Організаторка та декораторка подій. Фасилітаторка програми ""Активні громадяни"" від Британської ради. Менеджерка залучення ресурсів у Львівському обласному молодіжному центрі; Засновниця/голова у ГО ""Львівська майстерня організації подій"".\n""<a href='https://www.facebook.com/profile.php?id=100002246408610'>Facebook</a>|<a href='https://www.linkedin.com/in/%D1%85%D1%80%D0%B8%D1%81%D1%82%D0%B8%D0%BD%D0%B0-%D0%BC%D0%BE%D0%BA%D1%80%D1%96%D0%B9-211186119'>Linkedin</a>|<a href='https://instagram.com/k.mokrii?utm_medium=copy_link'>Instagram</a>")
+                       caption="Громадська діячка. Тренерка soft skills. Організаторка та декораторка подій. Фасилітаторка програми ""Активні громадяни"" від Британської ради. Менеджерка залучення ресурсів у Львівському обласному молодіжному центрі; Засновниця/голова у ГО ""Львівська майстерня організації подій"".\n""<a href='https://www.facebook.com/profile.php?id=100002246408610'>Facebook</a> | <a href='https://www.linkedin.com/in/%D1%85%D1%80%D0%B8%D1%81%D1%82%D0%B8%D0%BD%D0%B0-%D0%BC%D0%BE%D0%BA%D1%80%D1%96%D0%B9-211186119'>Linkedin</a>|<a href='https://instagram.com/k.mokrii?utm_medium=copy_link'>Instagram</a>")
     elif message_text == "Назар Подольчак":
         bot.send_photo(user.chat_id,
                        photo="https://ibb.co/Y2Tz7PG",
-                       caption="Професор та доктор економічних наук. Засновник спеціалізованої школи Tech StartUp School. Завідувач кафедри адміністративного та фінансового менеджменту у Львівській політехніці. \n""<a href='https://www.facebook.com/nazarpodolchak'>Facebook</a>|<a href='https://www.linkedin.com/in/nazar-podolchak-36b30b47/'>Linkedin</a>|<a href='https://www.instagram.com/nazarpodolchak/'>Instagram</a>")
+                       caption="Професор та доктор економічних наук. Засновник спеціалізованої школи Tech StartUp School. Завідувач кафедри адміністративного та фінансового менеджменту у Львівській політехніці. \n""<a href='https://www.facebook.com/nazarpodolchak'>Facebook</a>|<a href='https://www.linkedin.com/in/nazar-podolchak-36b30b47/'>Linkedin</a> | <a href='https://www.instagram.com/nazarpodolchak/'>Instagram</a>")
     elif message_text == "Марго Васильєва":
         bot.send_photo(user.chat_id,
                        photo="https://ibb.co/0VGtbqB",
@@ -139,12 +139,17 @@ def photo_id(message):
 
 
 def send_welcome_message_and_start_quiz(user: User):
-    bot.send_message(user.chat_id, text=(
+    bot.send_photo(
+        user.chat_id,
+        caption=(
         " Привіт, любий друже!\n"
         "Насувається десятий BEST training week, тиждень мега крутих тренінгів та шерінгів🔥 Тому саме для тебе ми підготували щось дійсно захопливе.Наші спікери розкажуть тобі багато крутої інфи й поділяться власним досвідом✨\n"
-        "Пройди реєстрацію і дізнайся, що на тебе чекає.\n"
+        "Пройди реєстрацію і дізнайся, що на тебе чекає📝\n"
 
-    ))
+    ),
+        # photo="https://ibb.co/BLZNq1q",
+        photo="https://ibb.co/2KpPHrb"
+    )
 
     final_func = user_section.send_start_menu
     quiz.start_starting_quiz(user, bot, final_func)

@@ -100,11 +100,11 @@ def handle_text_buttons(message):
     elif message_text == "Орест Дмитрасевич":
         bot.send_photo(user.chat_id,
                        photo="https://ibb.co/tp9NcTR",
-                       caption="Program manager в українській IT-компанії ELEKS. Автор найбільшого блогу в Україні про product management ""<a href='https://t.me/themanagerblog'>Kaizen</a>"".Орест розкаже як починав свій кар’єрний шлях project-менеджера та як досягти успіху в цій сфері. \n""<a href='https://www.facebook.com/o.dmytrasevych'>Facebook</a> | <a href='https://www.linkedin.com/in/odmytrasevych'>Linkedin</a>")
+                       caption="Program manager в українській IT-компанії ELEKS. Автор найбільшого блогу в Україні про project management ""<a href='https://t.me/themanagerblog'>Kaizen</a>"". Орест розкаже як починав свій кар’єрний шлях project-менеджера та як досягти успіху в цій сфері. \n""<a href='https://www.facebook.com/o.dmytrasevych'>Facebook</a> | <a href='https://www.linkedin.com/in/odmytrasevych'>Linkedin</a>")
     elif message_text == "Михайло Дубчак":
         bot.send_photo(user.chat_id,
                        photo="https://ibb.co/SKXsyyc",
-                       caption="Таргетолог-стратег. Запускає рекламу, яка дійсно приносить прибуток. Знімає цікаві відеоуроки по SMM і таргету на ""<a href='https://www.youtube.com/channel/UCYXrY_QWuVGwQn5sAhhNwnw'>Youtube</a>"". Співзасновник агентства ADC Wind. Михайло розкаже про професію таргетолога та про роль таргетованої реклами в онлайн-маркетингу. \n""<a href='https://www.instagram.com/meta_marketer/'>Instagram</a>")
+                       caption="Таргетолог-стратег. Запускає рекламу, яка дійсно приносить прибуток. Знімає цікаві відеоуроки по SMM і таргету на ""<a href='https://www.youtube.com/channel/UCYXrY_QWuVGwQn5sAhhNwnw'>Youtube</a>"". Співзасновник агентства ADS Wind. Михайло розкаже про професію таргетолога та про роль таргетованої реклами в онлайн-маркетингу. \n""<a href='https://www.instagram.com/meta_marketer/'>Instagram</a>")
     elif message_text == "Роксолана Салашник":
         bot.send_photo(user.chat_id,
                        photo="https://ibb.co/yy9QqyG",
@@ -147,7 +147,7 @@ def send_welcome_message_and_start_quiz(user: User):
         "Пройди реєстрацію і дізнайся, що на тебе чекає📝\n"
 
     ),
-        photo="https://ibb.co/2KpPHrb"
+        photo="https://ibb.co/jv4cZvG"
     )
 
     final_func = user_section.send_start_menu

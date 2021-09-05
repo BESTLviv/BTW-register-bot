@@ -83,7 +83,6 @@ class Data:
         q_email = Question(
             name="email",
             message="Ми на фінішній прямій. Вкажи адресу своєї електронної пошти. Обіцяємо, спамити не будемо😉",
-            regex="^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$",
             correct_answer_message="Дякую 🥰",
             wrong_answer_message="Введи, будь ласка, електронну адресу 🤡",
         )
@@ -95,15 +94,6 @@ class Data:
             allow_user_input=False,
         )
 
-        q_register_end = Question(
-            name="end_register",
-            message="Реєстрація успішно завершена🎉 ️\n\n Дякуємо, що обрав BTW X❤️\nЧекаємо тебе на тренінгах та шерінгах.\n\n Долучайся до нашого чату з спікерами: https://t.me/joinchat/fa4V6BaBQB45Zjhi \n<b>Поонлайнимо?</b> 🤓",
-            buttons=[
-                "Звісно"
-            ],
-            allow_user_input=False,
-        )
-
         quiz.questions = [
             q_name_surname,
             q_age,
@@ -112,7 +102,6 @@ class Data:
             q_contact,
             q_email,
             q_agree,
-            q_register_end,
         ]
 
         quiz.save()

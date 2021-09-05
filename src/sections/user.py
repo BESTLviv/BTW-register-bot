@@ -26,6 +26,9 @@ class UserSection(Section):
 
         self.bot.send_message(user.chat_id, text="Вибери команду з списку)", reply_markup=markup)
 
+    def send_register_message(self, user: User):
+        self.bot.send_message(user.chat_id, text="Реєстрація успішно завершена?? ️\n\n Дякуємо, що обрав BTW X❤️\nЧекаємо тебе на тренінгах та шерінгах.\n\n Долучайся до нашого чату з спікерами: https://t.me/joinchat/fa4V6BaBQB45Zjhi")
+        self.send_start_menu(user)
 
     def send_speakers_info_menu(self, user: User):
         btn_sp1 = KeyboardButton(text="Ірина Клейменова", )

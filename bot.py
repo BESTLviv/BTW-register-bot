@@ -78,7 +78,7 @@ def handle_text_buttons(message):
 
     if message_text == "Розклад":
         bot.send_photo(user.chat_id, caption="Розклад цьогорічного BTW",
-                       photo="https://ibb.co/VTt9GGX",
+                       photo="https://ibb.co/nk1BMvG",
                        reply_markup=markup)
     elif message_text == "Чат зі спікерами":
         bot.send_message(user.chat_id,
@@ -150,7 +150,8 @@ def send_welcome_message_and_start_quiz(user: User):
         photo="https://ibb.co/jv4cZvG"
     )
 
-    final_func = user_section.send_start_menu
+    # final_func = user_section.send_start_menu
+    final_func = user_section.send_register_message
     quiz.start_starting_quiz(user, bot, final_func)
 
 

@@ -112,7 +112,7 @@ def handle_text_buttons(message):
     elif message_text == "Софія Телішевська":
         bot.send_photo(user.chat_id,
                        photo="https://ibb.co/dcZd42k",
-                       caption="Політична журналістка. Авторка власної telegram-групи ""<a href='https://t.me/mediahospital'>Медіашпиталь</a>"". Софія доступно розкаже як простими словами розповідати про складні речі. \n""<a href='https://www.instagram.com/sonya_telishevska/'>Instagram</a>")
+                       caption="Політична журналістка та авторка Telegram-каналу ""<a href='https://t.me/mediahospital'>Медіашпиталь</a>"". Працювала на Фактах ICTV редакторкою стрічки новин та аналітикинею у Слово і діло. Нині вона журналістка Бабеля і розкаже вам як це, писати простими словами про складні речі В Telegram \n""<a href='https://www.instagram.com/sonya_telishevska/'>Instagram</a>")
     elif message_text == "Христина Мокрій":
         bot.send_photo(user.chat_id,
                        photo="https://ibb.co/85x3r2s",
@@ -120,11 +120,11 @@ def handle_text_buttons(message):
     elif message_text == "Назар Подольчак":
         bot.send_photo(user.chat_id,
                        photo="https://ibb.co/Y2Tz7PG",
-                       caption="Професор та доктор економічних наук. Засновник спеціалізованої школи Tech StartUp School. Завідувач кафедри адміністративного та фінансового менеджменту у Львівській політехніці. \n""<a href='https://www.facebook.com/nazarpodolchak'>Facebook</a>|<a href='https://www.linkedin.com/in/nazar-podolchak-36b30b47/'>Linkedin</a> | <a href='https://www.instagram.com/nazarpodolchak/'>Instagram</a>")
+                       caption="Професор та доктор економічних наук. Засновник спеціалізованої школи Tech StartUp School. Завідувач кафедри адміністративного та фінансового менеджменту у Львівській політехніці. Директор Наукового парку Львівської політехніки, почесний Амбасадор міста Львова. Розкаже тобі як запустити власний стартап та про можливості подальшого розвитку.  \n""<a href='https://www.facebook.com/nazarpodolchak'>Facebook</a>|<a href='https://www.linkedin.com/in/nazar-podolchak-36b30b47/'>Linkedin</a> | <a href='https://www.instagram.com/nazarpodolchak/'>Instagram</a>")
     elif message_text == "Марго Васильєва":
         bot.send_photo(user.chat_id,
                        photo="https://ibb.co/0VGtbqB",
-                       caption="Дівчина-мандрівниця, яка подолала понад 41 000 км. Одна із засновниць спільноти ""<a href='https://t.me/zlit_dzrhch'>Бакотиків</a>"" - групи різних мандрівників та автостоперів, які подорожують Україною та діляться власними враженнями.Марго розкаже як подорожувати автостопом та дасть поради. \n""<a href='https://instagram.com/margo.v66?utm_medium=copy_link'>Instagram</a>")
+                       caption="Дівчина-мандрівниця, яка подолала понад 42 000 км. Розкаже про спільноту ""<a href='https://t.me/zlit_dzrhch'>Бакотиків</a>"" – групу різних мандрівників та автостоперів, які подорожують Україною. Марго розповість, як подорожувати автостопом та дасть поради. \n""<a href='https://instagram.com/margo.v66?utm_medium=copy_link'>Instagram</a>")
     elif message_text == "Назад":
         user_section.send_start_menu(user)
 

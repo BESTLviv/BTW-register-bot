@@ -28,8 +28,8 @@ class Section:
         delete=False,
         new=False,
     ):
-        prev_msg_action = self._get_prev_msg_action(edit, delete, new)
-        return f"Admin;{action};{user_id};{company_id};{vacancy_id};{prev_msg_action}"
+        # prev_msg_action = self._get_prev_msg_action(edit, delete, new)
+        return f"Admin;{action};{user_id};{company_id};{vacancy_id};{new}"
 
     def send_message(
         self, call: CallbackQuery, text=None, photo=None, reply_markup=None

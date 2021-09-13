@@ -12,7 +12,7 @@ class AdminSection(Section):
     def __init__(self, data: Data):
         super().__init__(data=data)
 
-        self.admin_markup = self._form_admin_menu_markup()
+        # self.admin_markup = self._form_admin_menu_markup()
 
     def process_callback(self, call: CallbackQuery, user: User):
         action = call.data.split(";")[1]
